@@ -113,7 +113,7 @@ export default function App () {
       <div className='search-result'>
         {
             chatHistory.length
-              ? chatHistory.reverse().map(element => (
+              ? chatHistory.map(element => (
                 <div key={crypto.randomUUID()}>
                   <p className='answer'><strong>{element.role === 'model' ? 'gemini' : 'usuario'}</strong>{`: ${element.parts[0].text}`}</p>
                 </div>
